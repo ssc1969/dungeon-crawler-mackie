@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ck66k8fowye3g"]
 
-[ext_resource type="Script" uid="uid://8pcm7bsoqxj0" path="res://ui/main_menu.gd" id="1_0dkrt"]
+[ext_resource type="Script" uid="uid://cmqlohb1488fi" path="res://ui/main_menu.gd" id="1_0dkrt"]
 [ext_resource type="Texture2D" uid="uid://yy6whoqw7n01" path="res://ui/assets/tumblr_7eaf56e8ab2c2a76d2ceb005a57b0333_fd15138f_640.jpg" id="1_t7e0r"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0dkrt"]
@@ -39,12 +39,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -102.0
-offset_top = -82.875
-offset_right = 102.0
-offset_bottom = 82.875
+offset_left = -68.23077
+offset_top = -55.4375
+offset_right = 68.23077
+offset_bottom = 55.4375
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 theme_override_constants/separation = 10
 alignment = 1
 
@@ -52,7 +53,7 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_gl0q7")
 text = "Start Game"
 
@@ -60,7 +61,7 @@ text = "Start Game"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_gl0q7")
 text = "Options"
 
@@ -68,7 +69,7 @@ text = "Options"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_gl0q7")
 text = "Exit"
 
@@ -79,13 +80,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.0
-offset_top = -148.0
-offset_right = 138.0
-offset_bottom = -77.0
+offset_left = -61.0
+offset_top = -105.0
+offset_right = 61.0
+offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 18
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 10
 text = "Dungeon Crawler"
 horizontal_alignment = 1
 vertical_alignment = 1
