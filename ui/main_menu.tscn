@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://ck66k8fowye3g"]
+
+[ext_resource type="Script" uid="uid://8pcm7bsoqxj0" path="res://ui/main_menu.gd" id="1_0dkrt"]
+[ext_resource type="Texture2D" uid="uid://yy6whoqw7n01" path="res://ui/assets/tumblr_7eaf56e8ab2c2a76d2ceb005a57b0333_fd15138f_640.jpg" id="1_t7e0r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0dkrt"]
+texture = ExtResource("1_t7e0r")
+modulate_color = Color(0.55495375, 0.5549537, 0.5549537, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl0q7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Control" unique_id=653723217]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0dkrt")
+
+[node name="Panel" type="Panel" parent="." unique_id=2052097162]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0dkrt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1802658158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -82.875
+offset_right = 102.0
+offset_bottom = 82.875
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=565220523]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_gl0q7")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=115867615]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_gl0q7")
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1937215487]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_gl0q7")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=1107439727]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -148.0
+offset_right = 138.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Dungeon Crawler"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
