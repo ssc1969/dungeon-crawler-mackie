@@ -15,6 +15,13 @@ run/main_scene="uid://do3p3rnuw82b1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug]
+
+gdscript/warnings/directory_rules={
+"res://addons": 0,
+"res://addons/SimpleFormatOnSave/": 1
+}
+
 [display]
 
 window/size/viewport_width=320
@@ -28,6 +35,10 @@ window/stretch/scale_mode="integer"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg")
 
 [input]
 
