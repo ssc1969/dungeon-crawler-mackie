@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwtbsetmvccu3"]
+
+[ext_resource type="Texture2D" uid="uid://co5uos7ffb372" path="res://player/sprites/player.png" id="1_qewh1"]
+[ext_resource type="Script" uid="uid://wv1f1yuig7ag" path="res://entities/components/scripts/inventory.gd" id="2_ny66j"]
+[ext_resource type="Script" uid="uid://c6n7ymxb77ham" path="res://items/scripts/slot_data.gd" id="3_fhphf"]
+[ext_resource type="Script" uid="uid://3ho4pgj1auor" path="res://entities/components/scripts/interactable.gd" id="4_fhphf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hg0h"]
+atlas = ExtResource("1_qewh1")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ny66j"]
+radius = 4.0
+
+[node name="DebugEntity" type="StaticBody2D" unique_id=773506626]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281060682]
+modulate = Color(0.47800314, 0.0017911377, 0.7060211, 1)
+texture = SubResource("AtlasTexture_6hg0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1595387751]
+shape = SubResource("CircleShape2D_ny66j")
+
+[node name="InventoryComponent" type="Node2D" parent="." unique_id=266581219]
+script = ExtResource("2_ny66j")
+slots = Array[ExtResource("3_fhphf")]([null, null, null, null, null])
+metadata/_custom_type_script = "uid://wv1f1yuig7ag"
+
+[node name="InteractableComponent" type="Node2D" parent="." unique_id=260954757 node_paths=PackedStringArray("collision_shape")]
+script = ExtResource("4_fhphf")
+collision_shape = NodePath("../CollisionShape2D")
+metadata/_custom_type_script = "uid://3ho4pgj1auor"
