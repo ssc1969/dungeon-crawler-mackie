@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ckbr1emgrf2hl"]
+
+[ext_resource type="Script" uid="uid://cmslystpxfy12" path="res://items/scripts/item_effect.gd" id="1_57jwh"]
+[ext_resource type="Script" uid="uid://6c5uhh56fx0t" path="res://items/scripts/item_data.gd" id="2_hnaw8"]
+[ext_resource type="Texture2D" uid="uid://876emfnl2jht" path="res://icon.svg" id="3_hnaw8"]
+[ext_resource type="Resource" uid="uid://ce13uyrn7tj5n" path="res://items/types/dummy_type.tres" id="4_mqeme"]
+
+[resource]
+script = ExtResource("2_hnaw8")
+name = "Dummy Item"
+description = "I'm testing yuh"
+texture = ExtResource("3_hnaw8")
+type_data = ExtResource("4_mqeme")
+metadata/_custom_type_script = "uid://6c5uhh56fx0t"

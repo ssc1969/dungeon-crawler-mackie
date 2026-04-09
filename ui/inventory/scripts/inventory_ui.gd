@@ -4,13 +4,13 @@ var focus_index: int
 
 @export var data: InventoryData
 
-# TODO: replace with preloaded inventory slot scene
-var INVENTORY_SLOT: PackedScene
+const INVENTORY_SLOT = preload("uid://cm6klkcacnne4")
 
 
 func _ready() -> void:
 	clear_inventory()
 	data.changed.connect(on_inventory_changed)
+	update_inventory()
 
 
 func clear_inventory() -> void:
