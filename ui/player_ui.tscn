@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://52pqbcl7tq8w"]
 
-[ext_resource type="PackedScene" uid="uid://cm6klkcacnne4" path="res://ui/inventory_slot.tscn" id="1_cfom6"]
 [ext_resource type="PackedScene" uid="uid://cfhgtf2cj4hbh" path="res://ui/gear_slot.tscn" id="1_vq5xy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gvan"]
@@ -43,13 +42,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_3gvan")
 
-[node name="RightDisplay" type="Panel" parent="UI" unique_id=337229567]
+[node name="InventoryPanel" type="Panel" parent="UI" unique_id=337229567]
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_cfom6")
 
-[node name="VerticalGridRightDisplay" type="VBoxContainer" parent="UI/RightDisplay" unique_id=1720464716]
+[node name="InventoryUI" type="VBoxContainer" parent="UI/InventoryPanel" unique_id=1720464716]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 5
 
-[node name="MarginEquipment" type="MarginContainer" parent="UI/RightDisplay/VerticalGridRightDisplay" unique_id=1683996272]
+[node name="EquipmentMargin" type="MarginContainer" parent="UI/InventoryPanel/InventoryUI" unique_id=1683996272]
 custom_minimum_size = Vector2(5, 5)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
@@ -67,67 +66,67 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="EquipmentSection" type="HBoxContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment" unique_id=381584156]
+[node name="EquipmentSection" type="HBoxContainer" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin" unique_id=381584156]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="PaperDoll" type="Panel" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection" unique_id=902445418]
+[node name="PaperDoll" type="Panel" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection" unique_id=902445418]
 custom_minimum_size = Vector2(20, 35)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vq5xy")
 
-[node name="EquipmentSlots" type="VBoxContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection" unique_id=427394705]
+[node name="EquipmentSlots" type="VBoxContainer" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection" unique_id=427394705]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 4
 
-[node name="Top Slots" type="HBoxContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots" unique_id=2093856303]
+[node name="Top Slots" type="HBoxContainer" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=2093856303]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 
-[node name="LeftMost" type="HBoxContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/Top Slots" unique_id=1495208399]
+[node name="LeftMost" type="HBoxContainer" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots" unique_id=1495208399]
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="GearSlot" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/Top Slots/LeftMost" unique_id=517370823 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots/LeftMost" unique_id=517370823 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="GearSlot2" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/Top Slots/LeftMost" unique_id=631366917 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot2" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots/LeftMost" unique_id=631366917 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="GearSlot" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/Top Slots" unique_id=932647997 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots" unique_id=932647997 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="MiddleSlots" type="HBoxContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots" unique_id=128662364]
+[node name="MiddleSlots" type="HBoxContainer" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=128662364]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="GearSlot3" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=841818119 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot3" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=841818119 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="GearSlot2" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=2057129540 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot2" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=2057129540 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="GearSlot" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=1569295499 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=1569295499 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="EquipmentSlotsLabel" type="Label" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots" unique_id=1544423043]
+[node name="EquipmentSlotsLabel" type="Label" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=1544423043]
 layout_mode = 2
 theme_override_font_sizes/font_size = 4
 text = "Equipment Slots"
 
-[node name="BottomSlots" type="HBoxContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots" unique_id=1319460250]
+[node name="BottomSlots" type="HBoxContainer" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=1319460250]
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="GearSlot2" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/BottomSlots" unique_id=1333388084 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot2" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/BottomSlots" unique_id=1333388084 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="GearSlot" parent="UI/RightDisplay/VerticalGridRightDisplay/MarginEquipment/EquipmentSection/EquipmentSlots/BottomSlots" unique_id=1473772883 instance=ExtResource("1_vq5xy")]
+[node name="GearSlot" parent="UI/InventoryPanel/InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/BottomSlots" unique_id=1473772883 instance=ExtResource("1_vq5xy")]
 layout_mode = 2
 
-[node name="GridMarginContainer" type="MarginContainer" parent="UI/RightDisplay/VerticalGridRightDisplay" unique_id=679787158]
+[node name="InventoryMargin" type="MarginContainer" parent="UI/InventoryPanel/InventoryUI" unique_id=679787158]
 custom_minimum_size = Vector2(5, 5)
 layout_mode = 2
 size_flags_vertical = 2
@@ -137,58 +136,10 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="InventoryGrid" type="GridContainer" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer" unique_id=1225469008]
+[node name="InventoryGrid" type="GridContainer" parent="UI/InventoryPanel/InventoryUI/InventoryMargin" unique_id=1225469008]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 2
 columns = 5
-
-[node name="InventorySlot7" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=281131483 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot8" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=731251940 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot9" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=952818598 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot10" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1626114570 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot11" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=32066135 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot12" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1583676688 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot4" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=4743 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot5" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1406881231 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot6" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1727905997 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1339710862 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot2" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1742404491 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="InventorySlot3" parent="UI/RightDisplay/VerticalGridRightDisplay/GridMarginContainer/InventoryGrid" unique_id=1634993748 instance=ExtResource("1_cfom6")]
-layout_mode = 2
-size_flags_horizontal = 6
