@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bd4jjdy7fbp1m"]
 
 [ext_resource type="Script" uid="uid://dlsromyoj4ra4" path="res://player/scripts/player.gd" id="1_1v1wt"]
+[ext_resource type="PackedScene" uid="uid://52pqbcl7tq8w" path="res://ui/player_hud.tscn" id="2_6ahhe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1v1wt"]
 radius = 6.0
@@ -22,3 +23,5 @@ shape = SubResource("CircleShape2D_1v1wt")
 texture = SubResource("AtlasTexture_6ahhe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1512589888]
+
+[node name="PlayerHUD" parent="." unique_id=98306561 instance=ExtResource("2_6ahhe")]

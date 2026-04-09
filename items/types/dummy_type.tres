@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemType" format=3 uid="uid://ce13uyrn7tj5n"]
+
+[ext_resource type="Script" uid="uid://csvphk5okf2uo" path="res://items/scripts/item_type.gd" id="1_0h5gh"]
+[ext_resource type="Texture2D" uid="uid://yy6whoqw7n01" path="res://ui/assets/tumblr_7eaf56e8ab2c2a76d2ceb005a57b0333_fd15138f_640.jpg" id="2_8neaf"]
+
+[resource]
+script = ExtResource("1_0h5gh")
+name = "Dummy Type"
+texture = ExtResource("2_8neaf")
+metadata/_custom_type_script = "uid://csvphk5okf2uo"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cm6klkcacnne4"]
 
 [ext_resource type="Texture2D" uid="uid://yy6whoqw7n01" path="res://ui/assets/tumblr_7eaf56e8ab2c2a76d2ceb005a57b0333_fd15138f_640.jpg" id="1_d1f1n"]
+[ext_resource type="Script" uid="uid://b2uuup4j8ttjo" path="res://ui/inventory/scripts/inventory_slot_ui.gd" id="1_nktrt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t8ig"]
 
@@ -19,8 +20,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("1_nktrt")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1165925991]
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1165925991]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
@@ -32,11 +34,19 @@ expand_mode = 2
 [node name="ItemType" type="Panel" parent="." unique_id=286698907]
 custom_minimum_size = Vector2(3, 3)
 layout_mode = 1
-offset_right = 3.0
-offset_bottom = 3.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6t8ig")
 
-[node name="SlotNumber" type="Label" parent="." unique_id=961678155]
+[node name="TypeIcon" type="TextureRect" parent="ItemType" unique_id=154101861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d1f1n")
+expand_mode = 2
+
+[node name="Count" type="Label" parent="." unique_id=961678155]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

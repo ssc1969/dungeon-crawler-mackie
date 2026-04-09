@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cvxmbtpvdqcny"]
+
+[ext_resource type="PackedScene" uid="uid://cfhgtf2cj4hbh" path="res://ui/inventory/gear_slot.tscn" id="1_jm3eq"]
+[ext_resource type="Script" uid="uid://dwnli8of131gs" path="res://ui/inventory/scripts/inventory_ui.gd" id="2_8a20s"]
+[ext_resource type="Resource" uid="uid://c4bt40xmpr6ar" path="res://player/inventory_data.tres" id="3_8a20s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfom6"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vq5xy"]
+bg_color = Color(0.99976546, 0.06207668, 0.8489472, 1)
+
+[node name="InventoryPanel" type="Panel" unique_id=972148492]
+custom_minimum_size = Vector2(96, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_cfom6")
+
+[node name="InventoryUI" type="VBoxContainer" parent="." unique_id=446526396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="EquipmentMargin" type="MarginContainer" parent="InventoryUI" unique_id=249389953]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="EquipmentSection" type="HBoxContainer" parent="InventoryUI/EquipmentMargin" unique_id=1113813662]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="PaperDoll" type="Panel" parent="InventoryUI/EquipmentMargin/EquipmentSection" unique_id=661581391]
+custom_minimum_size = Vector2(20, 35)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vq5xy")
+
+[node name="EquipmentSlots" type="VBoxContainer" parent="InventoryUI/EquipmentMargin/EquipmentSection" unique_id=105754845]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="Top Slots" type="HBoxContainer" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=1026772037]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="LeftMost" type="HBoxContainer" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots" unique_id=436046043]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="GearSlot" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots/LeftMost" unique_id=517370823 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="GearSlot2" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots/LeftMost" unique_id=1623826121 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="GearSlot" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/Top Slots" unique_id=2062307102 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="MiddleSlots" type="HBoxContainer" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=1417231945]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="GearSlot3" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=49262560 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="GearSlot2" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=2024283401 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="GearSlot" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/MiddleSlots" unique_id=1785655032 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="EquipmentSlotsLabel" type="Label" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=541576135]
+layout_mode = 2
+theme_override_font_sizes/font_size = 4
+text = "Equipment Slots"
+
+[node name="BottomSlots" type="HBoxContainer" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots" unique_id=463195940]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="GearSlot2" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/BottomSlots" unique_id=1774633544 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="GearSlot" parent="InventoryUI/EquipmentMargin/EquipmentSection/EquipmentSlots/BottomSlots" unique_id=1603293889 instance=ExtResource("1_jm3eq")]
+layout_mode = 2
+
+[node name="InventoryMargin" type="MarginContainer" parent="InventoryUI" unique_id=565370509]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="InventoryGrid" type="GridContainer" parent="InventoryUI/InventoryMargin" unique_id=1577099263]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 5
+script = ExtResource("2_8a20s")
+data = ExtResource("3_8a20s")
