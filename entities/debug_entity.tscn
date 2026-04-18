@@ -18,7 +18,7 @@ radius = 4.0
 modulate = Color(0.47800314, 0.0017911377, 0.7060211, 1)
 texture = SubResource("AtlasTexture_6hg0h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1595387751]
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=1595387751]
 shape = SubResource("CircleShape2D_ny66j")
 
 [node name="InventoryComponent" type="Node2D" parent="." unique_id=266581219]
@@ -26,7 +26,7 @@ script = ExtResource("2_ny66j")
 slots = Array[ExtResource("3_fhphf")]([null, null, null, null, null])
 metadata/_custom_type_script = "uid://wv1f1yuig7ag"
 
-[node name="InteractableComponent" type="Node2D" parent="." unique_id=260954757 node_paths=PackedStringArray("collision_shape")]
+[node name="InteractableComponent" type="Node2D" parent="." unique_id=260954757 node_paths=PackedStringArray("collision_object")]
 script = ExtResource("4_fhphf")
-collision_shape = NodePath("../CollisionShape2D")
+collision_object = NodePath("..")
 metadata/_custom_type_script = "uid://3ho4pgj1auor"
