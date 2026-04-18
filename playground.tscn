@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bd4jjdy7fbp1m" path="res://player/player_character.tscn" id="1_rupst"]
 [ext_resource type="TileSet" uid="uid://hif366a15rrd" path="res://dungeons/assets/walls.tres" id="2_wt17y"]
-[ext_resource type="PackedScene" uid="uid://dwtbsetmvccu3" path="res://entities/debug_entity.tscn" id="3_m8u5f"]
+[ext_resource type="PackedScene" uid="uid://dm3c14of8j81e" path="res://entities/debug_entity.tscn" id="3_m8u5f"]
 
 [node name="Playground" type="Node2D" unique_id=456518182]
 

@@ -9,7 +9,7 @@ func is_empty() -> bool:
 
 
 func can_stack(new_item: Item) -> bool:
-	return item == new_item and quantity < item.max_stack
+	return item == new_item and quantity < item.stack_size
 
 
 func use() -> void:

@@ -21,7 +21,7 @@ func interact():
 	if not can_interact():
 		return
 
-	interactables[0].emit_signal("interacted", self)
+	interactables[0].emit_signal("interacted", self.get_parent())
 
 
 func can_interact() -> bool:

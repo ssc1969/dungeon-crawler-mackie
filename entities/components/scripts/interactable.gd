@@ -2,7 +2,7 @@
 class_name InteractableComponent extends Node2D
 
 @export var collision_object: CollisionObject2D
-@export var effects: Array[ItemEffect]
+@export var effects: Array[Action]
 
 
 func _ready() -> void:
@@ -15,9 +15,9 @@ func _ready() -> void:
 	collision_object.connect("interacted", interact)
 
 
-func interact(_interactor: Node2D) -> void:
+func interact(interactor: Node2D) -> void:
 	if effects.size() == 0:
 		return
 
 	for e in effects:
-		e.use()
+		e.use(interactor)

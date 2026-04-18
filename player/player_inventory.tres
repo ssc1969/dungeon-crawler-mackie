@@ -3,6 +3,27 @@
 [ext_resource type="Script" uid="uid://w6s71sgyf14g" path="res://items/scripts/inventory_data.gd" id="1_ja0dw"]
 [ext_resource type="Script" uid="uid://c6n7ymxb77ham" path="res://items/scripts/inventory_slot.gd" id="2_ep336"]
 
+[sub_resource type="Resource" id="Resource_ja0dw"]
+script = ExtResource("2_ep336")
+metadata/_custom_type_script = "uid://c6n7ymxb77ham"
+
+[sub_resource type="Resource" id="Resource_ep336"]
+script = ExtResource("2_ep336")
+metadata/_custom_type_script = "uid://c6n7ymxb77ham"
+
+[sub_resource type="Resource" id="Resource_q1hnr"]
+script = ExtResource("2_ep336")
+metadata/_custom_type_script = "uid://c6n7ymxb77ham"
+
+[sub_resource type="Resource" id="Resource_x05wf"]
+script = ExtResource("2_ep336")
+metadata/_custom_type_script = "uid://c6n7ymxb77ham"
+
+[sub_resource type="Resource" id="Resource_65hft"]
+script = ExtResource("2_ep336")
+metadata/_custom_type_script = "uid://c6n7ymxb77ham"
+
 [resource]
 script = ExtResource("1_ja0dw")
+slots = Array[ExtResource("2_ep336")]([SubResource("Resource_ja0dw"), SubResource("Resource_ep336"), SubResource("Resource_q1hnr"), SubResource("Resource_x05wf"), SubResource("Resource_65hft")])
 metadata/_custom_type_script = "uid://w6s71sgyf14g"

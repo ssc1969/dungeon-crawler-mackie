@@ -1,7 +1,6 @@
 class_name InventoryData extends Resource
 
 @export var slots: Array[InventorySlot]
-@export var max_slots: int = 20
 
 signal inventory_changed
 
@@ -11,8 +10,9 @@ func _init() -> void:
 
 
 func connect_slots() -> void:
-	for i in range(max_slots):
-		slots.append(InventorySlot.new())
+	for s in slots:
+		if s:
+			s.changed.connect(slot_changed)
 
 
 func add_item(item: Item, count: int = 1) -> int:

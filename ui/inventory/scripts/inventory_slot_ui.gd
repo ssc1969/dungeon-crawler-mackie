@@ -15,14 +15,15 @@ func _ready() -> void:
 	label.text = ""
 
 
-func set_slot_data(slot: InventorySlot) -> void:
-	if slot.is_empty():
+func set_slot_data(new_slot: InventorySlot) -> void:
+	if new_slot.is_empty():
 		item_icon.texture = null
 		type_icon.texture = null
 		label.text = ""
 	else:
-		type_icon.texture = slot_data.item_data.type_data.texture
-		item_icon.texture = slot_data.item_data.texture
+		slot_data = new_slot
+		type_icon.texture = slot_data.item.type_data.texture
+		item_icon.texture = slot_data.item.texture
 
 		label.text = str(slot_data.quantity) if slot_data.quantity > 1 else ""
 

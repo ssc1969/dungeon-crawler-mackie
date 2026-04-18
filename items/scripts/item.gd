@@ -8,7 +8,7 @@ class_name Item extends Resource
 @export var reusable: bool = false ## Whether or not this item can be reused
 
 @export_category("Item Use Effects")
-@export var effects: Array[ItemEffect]
+@export var effects: Array[Action]
 
 
 func use() -> bool:

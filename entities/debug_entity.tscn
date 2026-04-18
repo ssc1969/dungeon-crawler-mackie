@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://dm3c14of8j81e"]
 
 [ext_resource type="Texture2D" uid="uid://co5uos7ffb372" path="res://player/sprites/player.png" id="1_qewh1"]
-[ext_resource type="Script" uid="uid://wv1f1yuig7ag" path="res://entities/components/scripts/inventory.gd" id="2_ny66j"]
 [ext_resource type="Script" uid="uid://3ho4pgj1auor" path="res://entities/components/scripts/interactable.gd" id="4_fhphf"]
+[ext_resource type="Script" uid="uid://fyxl7bou77ff" path="res://actions/scripts/action.gd" id="6_wjnbp"]
+[ext_resource type="Script" uid="uid://cmslystpxfy12" path="res://actions/scripts/effect.gd" id="7_mpvv0"]
+[ext_resource type="Script" uid="uid://114hyhb3voc0" path="res://actions/effects/add_item.gd" id="8_mpvv0"]
+[ext_resource type="Resource" uid="uid://ckbr1emgrf2hl" path="res://items/dummy.tres" id="8_wf7ob"]
+[ext_resource type="Script" uid="uid://bgkubtdrbeymx" path="res://actions/scripts/targeter.gd" id="8_yn133"]
+[ext_resource type="Script" uid="uid://doj4vfbeqgiix" path="res://actions/targeters/interactor_targeter.gd" id="9_wf7ob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hg0h"]
 atlas = ExtResource("1_qewh1")
@@ -10,6 +15,21 @@ region = Rect2(0, 0, 8, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ny66j"]
 radius = 4.0
+
+[sub_resource type="Resource" id="Resource_yn133"]
+script = ExtResource("8_mpvv0")
+item = ExtResource("8_wf7ob")
+metadata/_custom_type_script = "uid://114hyhb3voc0"
+
+[sub_resource type="Resource" id="Resource_b6fjv"]
+script = ExtResource("9_wf7ob")
+metadata/_custom_type_script = "uid://doj4vfbeqgiix"
+
+[sub_resource type="Resource" id="Resource_23gus"]
+script = ExtResource("6_wjnbp")
+targeters = Array[ExtResource("8_yn133")]([SubResource("Resource_b6fjv")])
+effects = Array[ExtResource("7_mpvv0")]([SubResource("Resource_yn133")])
+metadata/_custom_type_script = "uid://fyxl7bou77ff"
 
 [node name="DebugEntity" type="StaticBody2D" unique_id=773506626]
 
@@ -20,11 +40,8 @@ texture = SubResource("AtlasTexture_6hg0h")
 [node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=1595387751]
 shape = SubResource("CircleShape2D_ny66j")
 
-[node name="InventoryComponent" type="Node2D" parent="." unique_id=266581219]
-script = ExtResource("2_ny66j")
-metadata/_custom_type_script = "uid://wv1f1yuig7ag"
-
 [node name="InteractableComponent" type="Node2D" parent="." unique_id=260954757 node_paths=PackedStringArray("collision_object")]
 script = ExtResource("4_fhphf")
 collision_object = NodePath("..")
+effects = Array[ExtResource("6_wjnbp")]([SubResource("Resource_23gus")])
 metadata/_custom_type_script = "uid://3ho4pgj1auor"
