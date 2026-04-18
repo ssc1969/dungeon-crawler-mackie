@@ -9,7 +9,7 @@ const INVENTORY_SLOT = preload("uid://cm6klkcacnne4")
 
 func _ready() -> void:
 	clear_inventory()
-	data.changed.connect(on_inventory_changed)
+	data.inventory_changed.connect(on_inventory_changed)
 	update_inventory()
 
 
@@ -23,6 +23,7 @@ func update_inventory() -> void:
 		var new_slot = INVENTORY_SLOT.instantiate()
 		add_child(new_slot)
 		new_slot.slot_data = slot
+
 		new_slot.focus_entered.connect(item_focused)
 
 	get_child(0).grab_focus()

@@ -1,6 +1,6 @@
 class_name InventorySlotUI extends Button
 
-var slot_data: SlotData:
+var slot_data: InventorySlot:
 	set = set_slot_data
 
 @onready var item_icon: TextureRect = $ItemIcon
@@ -9,23 +9,25 @@ var slot_data: SlotData:
 
 
 func _ready() -> void:
+	pressed.connect(_on_item_pressed)
 	type_icon.texture = null
 	item_icon.texture = null
 	label.text = ""
 
 
-func set_slot_data(value: SlotData) -> void:
-	slot_data = value
+func set_slot_data(slot: InventorySlot) -> void:
+	if slot.is_empty():
+		item_icon.texture = null
+		type_icon.texture = null
+		label.text = ""
+	else:
+		type_icon.texture = slot_data.item_data.type_data.texture
+		item_icon.texture = slot_data.item_data.texture
 
-	if slot_data == null:
-		return
-
-	type_icon.texture = slot_data.item_data.type_data.texture
-	item_icon.texture = slot_data.item_data.texture
-	label.text = str(slot_data.quantity)
+		label.text = str(slot_data.quantity) if slot_data.quantity > 1 else ""
 
 
-func item_pressed() -> void:
+func _on_item_pressed() -> void:
 	if !slot_data:
 		return
 

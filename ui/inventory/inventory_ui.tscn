@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cvxmbtpvdqcny"]
+[gd_scene format=3 uid="uid://c0m18ypjuiqmn"]
 
 [ext_resource type="PackedScene" uid="uid://cfhgtf2cj4hbh" path="res://ui/inventory/gear_slot.tscn" id="1_jm3eq"]
 [ext_resource type="Script" uid="uid://dwnli8of131gs" path="res://ui/inventory/scripts/inventory_ui.gd" id="2_8a20s"]
-[ext_resource type="Resource" uid="uid://c4bt40xmpr6ar" path="res://player/inventory_data.tres" id="3_8a20s"]
+[ext_resource type="Resource" uid="uid://kfxrvjjrqhb6" path="res://player/player_inventory.tres" id="3_8a20s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfom6"]
 content_margin_left = 5.0
