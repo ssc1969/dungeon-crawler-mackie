@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bd4jjdy7fbp1m"]
 
 [ext_resource type="Script" uid="uid://dlsromyoj4ra4" path="res://player/scripts/player.gd" id="1_1v1wt"]
-[ext_resource type="Script" uid="uid://c6cll7w72nl04" path="res://entities/components/scripts/interactor.gd" id="2_6ahhe"]
+[ext_resource type="PackedScene" path="res://ui/player_hud.tscn" id="2_6ahhe"]
 [ext_resource type="Script" uid="uid://wv1f1yuig7ag" path="res://entities/components/scripts/inventory.gd" id="3_ni121"]
-[ext_resource type="Script" uid="uid://w6s71sgyf14g" path="res://player/scripts/inventory_data.gd" id="4_2brt4"]
-[ext_resource type="Script" uid="uid://c6n7ymxb77ham" path="res://items/scripts/slot_data.gd" id="5_834sp"]
+[ext_resource type="Script" uid="uid://w6s71sgyf14g" path="res://items/scripts/inventory_data.gd" id="4_2brt4"]
+[ext_resource type="Script" uid="uid://c6n7ymxb77ham" path="res://items/scripts/inventory_slot.gd" id="5_834sp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1v1wt"]
 radius = 8.0
@@ -37,7 +37,6 @@ texture = SubResource("AtlasTexture_6ahhe")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1512589888]
 
 [node name="InteractorComponent" type="Area2D" parent="." unique_id=792611299]
-script = ExtResource("2_6ahhe")
 metadata/_custom_type_script = "uid://c6cll7w72nl04"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractorComponent" unique_id=1297149313]
@@ -48,3 +47,5 @@ debug_color = Color(0.68539995, 0.50093186, 0.020130012, 0.41960785)
 script = ExtResource("3_ni121")
 inventory = SubResource("Resource_rjqbx")
 metadata/_custom_type_script = "uid://wv1f1yuig7ag"
+
+[node name="PlayerHUD" parent="." unique_id=98306561 instance=ExtResource("2_6ahhe")]

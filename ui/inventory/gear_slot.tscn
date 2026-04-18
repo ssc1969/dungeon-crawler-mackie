@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cfhgtf2cj4hbh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn4u6"]
+bg_color = Color(0.75968635, 0.40284672, 1, 1)
+
+[node name="GearSlot" type="Panel" unique_id=517370823]
+custom_minimum_size = Vector2(15, 15)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -305.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rn4u6")
