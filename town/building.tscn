@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://k7vbud2rsj5d"]
+
+[ext_resource type="Texture2D" uid="uid://d2w0xk0c0ai5u" path="res://town/assets/rabbit-care-tips-in-brandenton-fl.jpg" id="1_0gy25"]
+[ext_resource type="Script" uid="uid://da56u4s7wwauc" path="res://town/building_interaction.gd" id="2_dqyyu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euseg"]
+size = Vector2(840, 1074)
+
+[node name="Building" type="Node2D" unique_id=1679778916]
+script = ExtResource("2_dqyyu")
+
+[node name="BuildingSprite" type="Sprite2D" parent="." unique_id=982768875]
+position = Vector2(34, 36.000004)
+scale = Vector2(0.07871367, 0.06580457)
+texture = ExtResource("1_0gy25")
+
+[node name="Area2D" type="Area2D" parent="BuildingSprite" unique_id=1820071879]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingSprite/Area2D" unique_id=984731409]
+position = Vector2(0.56414795, 0)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_euseg")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://c4bt40xmpr6ar"]
 
-[ext_resource type="Script" path="res://player/scripts/inventory_data.gd" id="1_j7cmi"]
+[ext_resource type="Script" uid="uid://w6s71sgyf14g" path="res://player/scripts/inventory_data.gd" id="1_j7cmi"]
 [ext_resource type="Script" uid="uid://c6n7ymxb77ham" path="res://items/scripts/slot_data.gd" id="2_sjdki"]
 [ext_resource type="Resource" uid="uid://ckbr1emgrf2hl" path="res://items/dummy.tres" id="3_sjdki"]
 
