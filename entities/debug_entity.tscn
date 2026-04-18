@@ -1,8 +1,7 @@
-[gd_scene format=3 uid="uid://dwtbsetmvccu3"]
+[gd_scene format=3 uid="uid://dm3c14of8j81e"]
 
 [ext_resource type="Texture2D" uid="uid://co5uos7ffb372" path="res://player/sprites/player.png" id="1_qewh1"]
 [ext_resource type="Script" uid="uid://wv1f1yuig7ag" path="res://entities/components/scripts/inventory.gd" id="2_ny66j"]
-[ext_resource type="Script" uid="uid://c6n7ymxb77ham" path="res://items/scripts/slot_data.gd" id="3_fhphf"]
 [ext_resource type="Script" uid="uid://3ho4pgj1auor" path="res://entities/components/scripts/interactable.gd" id="4_fhphf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hg0h"]
@@ -23,7 +22,6 @@ shape = SubResource("CircleShape2D_ny66j")
 
 [node name="InventoryComponent" type="Node2D" parent="." unique_id=266581219]
 script = ExtResource("2_ny66j")
-slots = Array[ExtResource("3_fhphf")]([null, null, null, null, null])
 metadata/_custom_type_script = "uid://wv1f1yuig7ag"
 
 [node name="InteractableComponent" type="Node2D" parent="." unique_id=260954757 node_paths=PackedStringArray("collision_object")]
