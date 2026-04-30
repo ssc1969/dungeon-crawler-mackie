@@ -14,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_x4k1b")
 building_name = "Yuh"
 can_toggle_inventory = true
+inventory_enabled = null
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=188463913]
 layout_mode = 0
@@ -21,7 +22,7 @@ offset_right = 320.0
 offset_bottom = 80.0
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1108246575]
+[node name="BuildingImage" type="TextureRect" parent="HBoxContainer" unique_id=1108246575]
 custom_minimum_size = Vector2(90, 180)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -33,7 +34,7 @@ expand_mode = 4
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HBoxContainer/BuildingOptions" unique_id=1253356972]
+[node name="Name" type="Label" parent="HBoxContainer/BuildingOptions" unique_id=1253356972]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -59,5 +60,3 @@ offset_right = 18.0
 offset_bottom = 22.0
 theme_override_font_sizes/font_size = 10
 text = "X"
-
-[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

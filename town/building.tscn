@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://k7vbud2rsj5d"]
 
 [ext_resource type="Texture2D" uid="uid://d2w0xk0c0ai5u" path="res://town/assets/rabbit-care-tips-in-brandenton-fl.jpg" id="1_0gy25"]
-[ext_resource type="Script" uid="uid://da56u4s7wwauc" path="res://town/building_interaction.gd" id="2_dqyyu"]
+[ext_resource type="Script" uid="uid://da56u4s7wwauc" path="res://town/scripts/building_interaction.gd" id="2_dqyyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euseg"]
 size = Vector2(840, 1074)
