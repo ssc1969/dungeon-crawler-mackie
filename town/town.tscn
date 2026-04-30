@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b0a8kdyigfshi"]
+
+[ext_resource type="PackedScene" uid="uid://k7vbud2rsj5d" path="res://town/building.tscn" id="1_iw333"]
+[ext_resource type="PackedScene" uid="uid://cwmvymf864d72" path="res://town/building_interior.tscn" id="2_ebvwp"]
+
+[node name="Town" type="Node2D" unique_id=1627278425]
+
+[node name="Building" parent="." unique_id=1679778916 instance=ExtResource("1_iw333")]
+building_interior = ExtResource("2_ebvwp")
+
+[node name="Building2" parent="." unique_id=1611448847 instance=ExtResource("1_iw333")]
+position = Vector2(209, 22)
+scale = Vector2(2, 1.4)
+building_interior = ExtResource("2_ebvwp")

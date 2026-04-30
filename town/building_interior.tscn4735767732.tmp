@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cwmvymf864d72"]
+
+[ext_resource type="Texture2D" uid="uid://d2w0xk0c0ai5u" path="res://town/assets/rabbit-care-tips-in-brandenton-fl.jpg" id="1_bogp8"]
+[ext_resource type="Script" uid="uid://doka5dswlusw8" path="res://town/scripts/building_interior.gd" id="1_x4k1b"]
+[ext_resource type="PackedScene" uid="uid://cvxmbtpvdqcny" path="res://ui/inventory/inventory_ui.tscn" id="3_7soce"]
+
+[node name="BuildingInterior" type="Control" unique_id=1993784435]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x4k1b")
+building_name = "Yuh"
+can_toggle_inventory = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=188463913]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 80.0
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1108246575]
+custom_minimum_size = Vector2(90, 180)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_bogp8")
+expand_mode = 4
+
+[node name="BuildingOptions" type="Panel" parent="HBoxContainer" unique_id=463105660]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/BuildingOptions" unique_id=1253356972]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_right = 35.0
+offset_bottom = 14.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 10
+text = "Name of Place"
+
+[node name="InventoryToggle" type="Button" parent="HBoxContainer" unique_id=730793225]
+layout_mode = 2
+text = "<"
+
+[node name="InventoryPanel" parent="HBoxContainer" unique_id=972148492 instance=ExtResource("3_7soce")]
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="." unique_id=106390359]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 10
+text = "X"
